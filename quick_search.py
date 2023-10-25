@@ -7,7 +7,7 @@ import urllib.parse
 def search(query):
     search_query = urllib.parse.quote(query)
     url = f"https://google.com/search?q={search_query}"
-    subprocess.run(["google-chrome", url])
+    subprocess.run(["open", "-a", "Google Chrome", url])
 
 def main():
     parser = argparse.ArgumentParser(description="Quick terminal search using Google Chrome")
